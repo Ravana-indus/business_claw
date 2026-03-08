@@ -1,0 +1,201 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2024-01-01 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"user_section",
+		"user",
+		"timestamp",
+		"conversation_id",
+		"column_break_4",
+		"tool_name",
+		"execution_status",
+		"request_section",
+		"request_hash",
+		"request_json",
+		"column_break_9",
+		"response_hash",
+		"response_json",
+		"reference_section",
+		"reference_doctype",
+		"reference_name",
+		"column_break_14",
+		"risk_level",
+		"approval_section",
+		"approval_required",
+		"approved_by",
+		"column_break_18",
+		"error_message"
+	],
+	"fields": [
+		{
+			"fieldname": "user_section",
+			"fieldtype": "Section Break",
+			"label": "User Information"
+		},
+		{
+			"fieldname": "user",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "User",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "timestamp",
+			"fieldtype": "Datetime",
+			"in_list_view": 1,
+			"label": "Timestamp",
+			"reqd": 1
+		},
+		{
+			"fieldname": "conversation_id",
+			"fieldtype": "Data",
+			"label": "Conversation ID"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "tool_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Tool Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "execution_status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Execution Status",
+			"options": "Pending\nExecuted\nFailed\nRejected",
+			"default": "Pending"
+		},
+		{
+			"fieldname": "request_section",
+			"fieldtype": "Section Break",
+			"label": "Request & Response"
+		},
+		{
+			"fieldname": "request_hash",
+			"fieldtype": "Data",
+			"label": "Request Hash",
+			"read_only": 1
+		},
+		{
+			"fieldname": "request_json",
+			"fieldtype": "Code",
+			"label": "Request JSON",
+			"options": "JSON",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_9",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "response_hash",
+			"fieldtype": "Data",
+			"label": "Response Hash",
+			"read_only": 1
+		},
+		{
+			"fieldname": "response_json",
+			"fieldtype": "Code",
+			"label": "Response JSON",
+			"options": "JSON",
+			"read_only": 1
+		},
+		{
+			"fieldname": "reference_section",
+			"fieldtype": "Section Break",
+			"label": "Reference Document"
+		},
+		{
+			"fieldname": "reference_doctype",
+			"fieldtype": "Link",
+			"label": "Reference DocType",
+			"options": "DocType"
+		},
+		{
+			"fieldname": "reference_name",
+			"fieldtype": "Dynamic Link",
+			"label": "Reference Name",
+			"options": "reference_doctype"
+		},
+		{
+			"fieldname": "column_break_14",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "risk_level",
+			"fieldtype": "Select",
+			"label": "Risk Level",
+			"options": "Low\nMedium\nHigh\nCritical",
+			"default": "Low"
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "Approval"
+		},
+		{
+			"default": "0",
+			"fieldname": "approval_required",
+			"fieldtype": "Check",
+			"label": "Approval Required"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_18",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "error_message",
+			"fieldtype": "Text",
+			"label": "Error Message",
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2024-01-01 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_audit",
+	"name": "AI Action Log",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"read": 1,
+			"role": "All",
+			"write": 0
+		}
+	],
+	"sort_field": "timestamp",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

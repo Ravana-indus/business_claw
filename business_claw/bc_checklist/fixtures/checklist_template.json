@@ -1,0 +1,94 @@
+[
+	{
+		"doctype": "Checklist Template",
+		"name": "Hiring - New Position",
+		"template_name": "Hiring - New Position",
+		"department": "HR",
+		"description": "Checklist for hiring a new position",
+		"active": 1,
+		"requires_approval": 1,
+		"version": "1.0",
+		"items": [
+			{"step_no": 1, "step_title": "Finalise job role", "instruction": "Define the job role and responsibilities", "mandatory": 1},
+			{"step_no": 2, "step_title": "Finalise salary range", "instruction": "Determine salary range based on market rates", "mandatory": 1},
+			{"step_no": 3, "step_title": "Get management approval", "instruction": "Obtain approval from management for the position", "mandatory": 1},
+			{"step_no": 4, "step_title": "Publish job vacancy", "instruction": "Post the job vacancy on relevant platforms", "mandatory": 1},
+			{"step_no": 5, "step_title": "Conduct interviews", "instruction": "Schedule and conduct interviews with candidates", "mandatory": 1},
+			{"step_no": 6, "step_title": "Select candidate", "instruction": "Select the best candidate based on interview performance", "mandatory": 1},
+			{"step_no": 7, "step_title": "Issue offer", "instruction": "Send offer letter to selected candidate", "mandatory": 1},
+			{"step_no": 8, "step_title": "Confirm acceptance", "instruction": "Confirm candidate's acceptance of the offer", "mandatory": 1}
+		]
+	},
+	{
+		"doctype": "Checklist Template",
+		"name": "Employee Onboarding",
+		"template_name": "Employee Onboarding",
+		"department": "HR",
+		"description": "Checklist for onboarding new employees",
+		"active": 1,
+		"requires_approval": 1,
+		"version": "1.0",
+		"items": [
+			{"step_no": 1, "step_title": "Collect documents", "instruction": "Collect all required documents from the new employee", "mandatory": 1},
+			{"step_no": 2, "step_title": "Sign contract", "instruction": "Ensure employment contract is signed", "mandatory": 1},
+			{"step_no": 3, "step_title": "Create email/account", "instruction": "Set up email and system accounts", "mandatory": 1},
+			{"step_no": 4, "step_title": "Assign reporting manager", "instruction": "Assign a reporting manager for the new employee", "mandatory": 1},
+			{"step_no": 5, "step_title": "Complete induction", "instruction": "Conduct employee induction session", "mandatory": 1},
+			{"step_no": 6, "step_title": "Confirm joining", "instruction": "Confirm the employee's first day and welcome them", "mandatory": 1}
+		]
+	},
+	{
+		"doctype": "Checklist Template",
+		"name": "Payment Approval",
+		"template_name": "Payment Approval",
+		"department": "Finance",
+		"description": "Checklist for approving payments",
+		"active": 1,
+		"requires_approval": 1,
+		"version": "1.0",
+		"items": [
+			{"step_no": 1, "step_title": "Receive invoice/request", "instruction": "Receive and verify the payment invoice or request", "mandatory": 1},
+			{"step_no": 2, "step_title": "Verify amount", "instruction": "Verify the payment amount is correct", "mandatory": 1},
+			{"step_no": 3, "step_title": "Check budget", "instruction": "Check if budget is available for this payment", "mandatory": 1},
+			{"step_no": 4, "step_title": "Get manager approval", "instruction": "Obtain approval from the manager", "mandatory": 1},
+			{"step_no": 5, "step_title": "Get finance approval", "instruction": "Obtain final approval from Finance", "mandatory": 1},
+			{"step_no": 6, "step_title": "Process payment", "instruction": "Process the actual payment", "mandatory": 1}
+		]
+	},
+	{
+		"doctype": "Checklist Template",
+		"name": "Refund Processing",
+		"template_name": "Refund Processing",
+		"department": "Finance",
+		"description": "Checklist for processing refunds",
+		"active": 1,
+		"requires_approval": 1,
+		"version": "1.0",
+		"items": [
+			{"step_no": 1, "step_title": "Receive refund request", "instruction": "Receive and log the refund request", "mandatory": 1},
+			{"step_no": 2, "step_title": "Review policy/contract", "instruction": "Review refund policy or contract terms", "mandatory": 1},
+			{"step_no": 3, "step_title": "Verify amount", "instruction": "Verify the refund amount is correct", "mandatory": 1},
+			{"step_no": 4, "step_title": "Get approval", "instruction": "Obtain approval from authorized personnel", "mandatory": 1},
+			{"step_no": 5, "step_title": "Process refund", "instruction": "Process the refund transaction", "mandatory": 1},
+			{"step_no": 6, "step_title": "Notify customer", "instruction": "Notify the customer that refund has been processed", "mandatory": 1}
+		]
+	},
+	{
+		"doctype": "Checklist Template",
+		"name": "Vendor Onboarding",
+		"template_name": "Vendor Onboarding",
+		"department": "Procurement",
+		"description": "Checklist for onboarding new vendors",
+		"active": 1,
+		"requires_approval": 1,
+		"version": "1.0",
+		"items": [
+			{"step_no": 1, "step_title": "Collect vendor details", "instruction": "Collect all required vendor information and documents", "mandatory": 1},
+			{"step_no": 2, "step_title": "Verify documents", "instruction": "Verify all submitted documents are authentic", "mandatory": 1},
+			{"step_no": 3, "step_title": "Approve pricing/terms", "instruction": "Review and approve vendor pricing and terms", "mandatory": 1},
+			{"step_no": 4, "step_title": "Get management approval", "instruction": "Obtain management approval for vendor onboarding", "mandatory": 1},
+			{"step_no": 5, "step_title": "Create vendor record", "instruction": "Create vendor record in the system", "mandatory": 1},
+			{"step_no": 6, "step_title": "Confirm activation", "instruction": "Confirm vendor is active and ready for business", "mandatory": 1}
+		]
+	}
+]

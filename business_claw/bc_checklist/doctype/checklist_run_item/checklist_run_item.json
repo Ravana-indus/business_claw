@@ -1,0 +1,100 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-03-08 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"step_no",
+		"step_title",
+		"mandatory",
+		"completed",
+		"completed_by",
+		"completed_date",
+		"assignee",
+		"due_date",
+		"attachment",
+		"remarks",
+		"comment"
+	],
+	"fields": [
+		{
+			"fieldname": "step_no",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "Step No",
+			"reqd": 1
+		},
+		{
+			"fieldname": "step_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Step Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "mandatory",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Mandatory"
+		},
+		{
+			"fieldname": "completed",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Completed"
+		},
+		{
+			"fieldname": "completed_by",
+			"fieldtype": "Link",
+			"label": "Completed By",
+			"options": "User",
+			"read_only": 1
+		},
+		{
+			"fieldname": "completed_date",
+			"fieldtype": "Datetime",
+			"label": "Completed Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "assignee",
+			"fieldtype": "Link",
+			"label": "Assignee",
+			"options": "User"
+		},
+		{
+			"fieldname": "due_date",
+			"fieldtype": "Date",
+			"label": "Due Date"
+		},
+		{
+			"fieldname": "attachment",
+			"fieldtype": "Attach",
+			"label": "Attachment"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "Remarks"
+		},
+		{
+			"fieldname": "comment",
+			"fieldtype": "Small Text",
+			"label": "Comment"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2026-03-08 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_checklist",
+	"name": "Checklist Run Item",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "step_no",
+	"sort_order": "ASC",
+	"states": [],
+	"track_changes": 1
+}

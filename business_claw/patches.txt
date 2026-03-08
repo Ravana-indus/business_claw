@@ -1,0 +1,5 @@
+# Patches for Business Claw
+# Format: <version>,<patch_file>
+
+1.0.0,patches/v1_0/create_ai_action_log.py
+1.0.0,patches/v1_0/create_ai_approval_request.py

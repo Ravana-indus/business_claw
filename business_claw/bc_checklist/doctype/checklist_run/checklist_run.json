@@ -1,0 +1,180 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "prompt",
+	"creation": "2026-03-08 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"template_section",
+		"checklist_template",
+		"template_name",
+		"version",
+		"department",
+		"column_break_6",
+		"status",
+		"started_by",
+		"responsible_person",
+		"start_date",
+		"completed_date",
+		"requires_approval",
+		"remarks",
+		"context_section",
+		"reference_type",
+		"reference_name",
+		"column_break_15",
+		"amount",
+		"target_person",
+		"effective_date",
+		"items_section",
+		"items"
+	],
+	"fields": [
+		{
+			"fieldname": "template_section",
+			"fieldtype": "Section Break",
+			"label": "Template"
+		},
+		{
+			"fieldname": "checklist_template",
+			"fieldtype": "Link",
+			"label": "Checklist Template",
+			"options": "Checklist Template"
+		},
+		{
+			"fieldname": "template_name",
+			"fieldtype": "Data",
+			"label": "Template Name",
+			"read_only": 1
+		},
+		{
+			"fieldname": "version",
+			"fieldtype": "Data",
+			"label": "Version",
+			"read_only": 1
+		},
+		{
+			"fieldname": "department",
+			"fieldtype": "Data",
+			"label": "Department"
+		},
+		{
+			"fieldname": "column_break_6",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Draft\nIn Progress\nSubmitted\nApproved\nRejected"
+		},
+		{
+			"fieldname": "started_by",
+			"fieldtype": "Link",
+			"label": "Started By",
+			"options": "User"
+		},
+		{
+			"fieldname": "responsible_person",
+			"fieldtype": "Link",
+			"label": "Responsible Person",
+			"options": "User"
+		},
+		{
+			"fieldname": "start_date",
+			"fieldtype": "Date",
+			"label": "Start Date"
+		},
+		{
+			"fieldname": "completed_date",
+			"fieldtype": "Date",
+			"label": "Completed Date",
+			"read_only": 1
+		},
+		{
+			"fieldname": "requires_approval",
+			"fieldtype": "Check",
+			"label": "Requires Approval",
+			"read_only": 1
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "Remarks"
+		},
+		{
+			"fieldname": "context_section",
+			"fieldtype": "Section Break",
+			"label": "Context"
+		},
+		{
+			"fieldname": "reference_type",
+			"fieldtype": "Select",
+			"label": "Reference Type",
+			"options": "Hiring\nPayment\nRefund\nVendor\nOther"
+		},
+		{
+			"fieldname": "reference_name",
+			"fieldtype": "Data",
+			"label": "Reference Name"
+		},
+		{
+			"fieldname": "column_break_15",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "amount",
+			"fieldtype": "Currency",
+			"label": "Amount"
+		},
+		{
+			"fieldname": "target_person",
+			"fieldtype": "Data",
+			"label": "Target Person / Party"
+		},
+		{
+			"fieldname": "effective_date",
+			"fieldtype": "Date",
+			"label": "Effective Date"
+		},
+		{
+			"fieldname": "items_section",
+			"fieldtype": "Section Break",
+			"label": "Items"
+		},
+		{
+			"fieldname": "items",
+			"fieldtype": "Table",
+			"label": "Items",
+			"options": "Checklist Run Item"
+		}
+	],
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-03-08 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_checklist",
+	"name": "Checklist Run",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

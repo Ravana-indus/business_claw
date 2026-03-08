@@ -1,0 +1,95 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "prompt",
+	"creation": "2026-03-08 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"template_name",
+		"department",
+		"description",
+		"column_break_4",
+		"active",
+		"requires_approval",
+		"version",
+		"items_section",
+		"items"
+	],
+	"fields": [
+		{
+			"fieldname": "template_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Template Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "department",
+			"fieldtype": "Data",
+			"label": "Department"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Small Text",
+			"label": "Description"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "1",
+			"fieldname": "active",
+			"fieldtype": "Check",
+			"label": "Active"
+		},
+		{
+			"fieldname": "requires_approval",
+			"fieldtype": "Check",
+			"label": "Requires Approval"
+		},
+		{
+			"default": "1.0",
+			"fieldname": "version",
+			"fieldtype": "Data",
+			"label": "Version"
+		},
+		{
+			"fieldname": "items_section",
+			"fieldtype": "Section Break",
+			"label": "Items"
+		},
+		{
+			"fieldname": "items",
+			"fieldtype": "Table",
+			"label": "Items",
+			"options": "Checklist Template Item"
+		}
+	],
+	"links": [],
+	"modified": "2026-03-08 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_checklist",
+	"name": "Checklist Template",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

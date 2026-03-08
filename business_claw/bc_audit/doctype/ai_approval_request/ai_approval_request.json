@@ -1,0 +1,203 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2024-01-01 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"status_section",
+		"status",
+		"risk_level",
+		"expires_at",
+		"column_break_4",
+		"requested_by",
+		"requested_at",
+		"action_section",
+		"tool_name",
+		"action_summary",
+		"payload",
+		"reference_section",
+		"linked_doctype",
+		"linked_docname",
+		"column_break_12",
+		"action_log",
+		"approval_section",
+		"approved_by",
+		"approved_at",
+		"column_break_17",
+		"rejection_reason"
+	],
+	"fields": [
+		{
+			"fieldname": "status_section",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"default": "Pending",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Pending\nApproved\nRejected\nExpired",
+			"reqd": 1
+		},
+		{
+			"fieldname": "risk_level",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Risk Level",
+			"options": "Low\nMedium\nHigh\nCritical"
+		},
+		{
+			"fieldname": "expires_at",
+			"fieldtype": "Datetime",
+			"label": "Expires At"
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "requested_by",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Requested By",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "requested_at",
+			"fieldtype": "Datetime",
+			"label": "Requested At",
+			"reqd": 1
+		},
+		{
+			"fieldname": "action_section",
+			"fieldtype": "Section Break",
+			"label": "Action Details"
+		},
+		{
+			"fieldname": "tool_name",
+			"fieldtype": "Data",
+			"label": "Tool Name",
+			"reqd": 1
+		},
+		{
+			"fieldname": "action_summary",
+			"fieldtype": "Text",
+			"label": "Action Summary",
+			"reqd": 1
+		},
+		{
+			"fieldname": "payload",
+			"fieldtype": "Code",
+			"label": "Payload",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "reference_section",
+			"fieldtype": "Section Break",
+			"label": "Reference"
+		},
+		{
+			"fieldname": "linked_doctype",
+			"fieldtype": "Link",
+			"label": "Linked DocType",
+			"options": "DocType"
+		},
+		{
+			"fieldname": "linked_docname",
+			"fieldtype": "Dynamic Link",
+			"label": "Linked DocName",
+			"options": "linked_doctype"
+		},
+		{
+			"fieldname": "column_break_12",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "action_log",
+			"fieldtype": "Link",
+			"label": "Action Log",
+			"options": "AI Action Log",
+			"read_only": 1
+		},
+		{
+			"fieldname": "approval_section",
+			"fieldtype": "Section Break",
+			"label": "Approval"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User",
+			"read_only": 1
+		},
+		{
+			"fieldname": "approved_at",
+			"fieldtype": "Datetime",
+			"label": "Approved At",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_17",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "rejection_reason",
+			"fieldtype": "Text",
+			"label": "Rejection Reason"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2024-01-01 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_audit",
+	"name": "AI Approval Request",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"read": 1,
+			"role": "All",
+			"write": 0
+		}
+	],
+	"sort_field": "requested_at",
+	"sort_order": "DESC",
+	"states": [
+		{
+			"color": "Orange",
+			"title": "Pending"
+		},
+		{
+			"color": "Green",
+			"title": "Approved"
+		},
+		{
+			"color": "Red",
+			"title": "Rejected"
+		},
+		{
+			"color": "Gray",
+			"title": "Expired"
+		}
+	],
+	"track_changes": 1
+}
