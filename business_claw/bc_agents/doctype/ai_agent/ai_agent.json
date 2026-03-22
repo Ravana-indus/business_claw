@@ -1,0 +1,220 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:agent_name",
+	"creation": "2026-03-22 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"agent_info_section",
+		"agent_name",
+		"agent_role",
+		"column_break_4",
+		"agent_type",
+		"llm_provider",
+		"model_section",
+		"model_version",
+		"column_break_8",
+		"system_prompt",
+		"status_section",
+		"is_active",
+		"status",
+		"column_break_13",
+		"last_active",
+		"user_section",
+		"frappe_user",
+		"parent_agent",
+		"column_break_17",
+		"daily_token_limit",
+		"current_token_usage",
+		"mcp_section",
+		"mcp_scope",
+		"column_break_22",
+		"capabilities_section",
+		"capabilities"
+	],
+	"fields": [
+		{
+			"fieldname": "agent_info_section",
+			"fieldtype": "Section Break",
+			"label": "Agent Information"
+		},
+		{
+			"fieldname": "agent_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Agent Name",
+			"reqd": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "agent_role",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Agent Role",
+			"options": "CEO\nCOO\nCTO\nCFO\nCMO\nCSO\nCIO\nCOO\nVP Engineering\nVP Sales\nProduct Manager\nDeveloper\nQA Engineer\nDevOps Engineer\nData Analyst\nCustomer Support",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_4",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "agent_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Agent Type",
+			"options": "orchestrator\nworker\nreviewer\nanalyst",
+			"reqd": 1
+		},
+		{
+			"fieldname": "llm_provider",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "LLM Provider",
+			"options": "OpenClaw\nHermes\nClaude Code\nOpenCode\nOpenAI\nAnthropic\nGemini\nLocal",
+			"reqd": 1
+		},
+		{
+			"fieldname": "model_section",
+			"fieldtype": "Section Break",
+			"label": "Model Configuration"
+		},
+		{
+			"fieldname": "model_version",
+			"fieldtype": "Data",
+			"label": "Model Version",
+			"placeholder": "e.g., claude-3-5-sonnet-20241022"
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "system_prompt",
+			"fieldtype": "Code",
+			"label": "System Prompt",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "status_section",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"default": "1",
+			"fieldname": "is_active",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Active"
+		},
+		{
+			"default": "Idle",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Idle\nWorking\nError\nOffline"
+		},
+		{
+			"fieldname": "column_break_13",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "last_active",
+			"fieldtype": "Datetime",
+			"label": "Last Active",
+			"read_only": 1
+		},
+		{
+			"fieldname": "user_section",
+			"fieldtype": "Section Break",
+			"label": "User & Hierarchy"
+		},
+		{
+			"fieldname": "frappe_user",
+			"fieldtype": "Link",
+			"label": "Frappe User",
+			"options": "User"
+		},
+		{
+			"fieldname": "parent_agent",
+			"fieldtype": "Link",
+			"label": "Parent Agent",
+			"options": "AI Agent"
+		},
+		{
+			"fieldname": "column_break_17",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "100000",
+			"fieldname": "daily_token_limit",
+			"fieldtype": "Int",
+			"label": "Daily Token Limit"
+		},
+		{
+			"default": "0",
+			"fieldname": "current_token_usage",
+			"fieldtype": "Int",
+			"label": "Current Token Usage",
+			"read_only": 1
+		},
+		{
+			"fieldname": "mcp_section",
+			"fieldtype": "Section Break",
+			"label": "MCP Configuration"
+		},
+		{
+			"fieldname": "mcp_scope",
+			"fieldtype": "Code",
+			"label": "MCP Scope (JSON)",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "column_break_22",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "capabilities_section",
+			"fieldtype": "Section Break",
+			"label": "Capabilities"
+		},
+		{
+			"fieldname": "capabilities",
+			"fieldtype": "Table",
+			"label": "Capabilities",
+			"options": "AI Agent Capability"
+		}
+	],
+	"links": [
+		{
+			"link_doctype": "AI Task",
+			"link_fieldname": "assigned_agent"
+		}
+	],
+	"modified": "2026-03-22 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_agents",
+	"name": "AI Agent",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

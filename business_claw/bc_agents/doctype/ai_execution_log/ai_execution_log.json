@@ -1,0 +1,162 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-03-22 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"execution_info_section",
+		"timestamp",
+		"task_reference",
+		"agent",
+		"action_type",
+		"column_break_5",
+		"status",
+		"tool_name",
+		"data_section",
+		"request_data",
+		"column_break_9",
+		"response_data",
+		"metrics_section",
+		"tokens_used",
+		"execution_duration",
+		"column_break_13",
+		"error_message"
+	],
+	"fields": [
+		{
+			"fieldname": "execution_info_section",
+			"fieldtype": "Section Break",
+			"label": "Execution Information"
+		},
+		{
+			"default": "now",
+			"fieldname": "timestamp",
+			"fieldtype": "Datetime",
+			"in_list_view": 1,
+			"label": "Timestamp",
+			"read_only": 1
+		},
+		{
+			"fieldname": "task_reference",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Task Reference",
+			"options": "AI Task"
+		},
+		{
+			"fieldname": "agent",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Agent",
+			"options": "AI Agent"
+		},
+		{
+			"fieldname": "action_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Action Type",
+			"options": "MCP_Read\nMCP_Write\nLLM_Reasoning\nHITL_Pause\nHITL_Resume\nTask_Created\nTask_Completed\nTask_Failed\nDelegation\nError"
+		},
+		{
+			"fieldname": "column_break_5",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Success",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Success\nFailed\nPending"
+		},
+		{
+			"fieldname": "tool_name",
+			"fieldtype": "Data",
+			"label": "Tool Name"
+		},
+		{
+			"fieldname": "data_section",
+			"fieldtype": "Section Break",
+			"label": "Data"
+		},
+		{
+			"fieldname": "request_data",
+			"fieldtype": "Code",
+			"label": "Request Data (JSON)",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "column_break_9",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "response_data",
+			"fieldtype": "Code",
+			"label": "Response Data (JSON)",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "metrics_section",
+			"fieldtype": "Section Break",
+			"label": "Metrics"
+		},
+		{
+			"default": "0",
+			"fieldname": "tokens_used",
+			"fieldtype": "Int",
+			"label": "Tokens Used",
+			"read_only": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "execution_duration",
+			"fieldtype": "Float",
+			"label": "Execution Duration (seconds)",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_13",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "error_message",
+			"fieldtype": "Text",
+			"label": "Error Message"
+		}
+	],
+	"links": [
+		{
+			"link_doctype": "AI Task",
+			"link_fieldname": "task_reference"
+		},
+		{
+			"link_doctype": "AI Agent",
+			"link_fieldname": "agent"
+		}
+	],
+	"modified": "2026-03-22 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_agents",
+	"name": "AI Execution Log",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "timestamp",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

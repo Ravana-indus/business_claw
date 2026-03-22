@@ -1,0 +1,38 @@
+[Unit]
+Description=Business Claw Agent Runner Service
+After=network.target postgresql.service redis-server.service frappe-web.service
+Wants=postgresql.service redis-server.service
+
+[Service]
+Type=notify
+User=frappe
+Group=frappe
+WorkingDirectory=/opt/business_claw/apps/business_claw/bc_agents/runner
+
+ExecStart=/usr/bin/python3 /opt/business_claw/apps/business_claw/bc_agents/runner/daemon.py --daemon
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill -INT $MAINPID
+
+Restart=on-failure
+RestartSec=10
+TimeoutStartSec=30
+TimeoutStopSec=60
+
+Environment="FRAPPE_SITE=localhost"
+Environment="BC_AGENT_MODE=production"
+Environment="BC_LOG_LEVEL=INFO"
+Environment="BC_POLL_INTERVAL=5"
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+Environment="PYTHONPATH=/opt/frappe-bench/sites/localhost/assets/bc_agents"
+
+StandardOutput=append:/opt/business_claw/logs/agent-runner.log
+StandardError=append:/opt/business_claw/logs/agent-runner-error.log
+
+PrivateTmp=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/opt/business_claw/logs /opt/frappe-bench/sites/localhost/assets
+
+[Install]
+WantedBy=multi-user.target

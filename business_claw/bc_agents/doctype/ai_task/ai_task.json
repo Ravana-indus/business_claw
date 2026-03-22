@@ -1,0 +1,262 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "hash",
+	"creation": "2026-03-22 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"task_info_section",
+		"title",
+		"description",
+		"column_break_3",
+		"assigned_agent",
+		"parent_task",
+		"status_section",
+		"status",
+		"priority",
+		"column_break_8",
+		"due_date",
+		"iteration_count",
+		"input_section",
+		"input_payload",
+		"column_break_12",
+		"metadata",
+		"execution_section",
+		"agent_draft_output",
+		"column_break_15",
+		"final_action_payload",
+		"result_section",
+		"result_payload",
+		"column_break_18",
+		"tokens_consumed",
+		"execution_time",
+		"error_section",
+		"error_message",
+		"column_break_21",
+		"approved_by",
+		"approved_on",
+		"child_tasks_section",
+		"child_tasks"
+	],
+	"fields": [
+		{
+			"fieldname": "task_info_section",
+			"fieldtype": "Section Break",
+			"label": "Task Information"
+		},
+		{
+			"fieldname": "title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Title",
+			"reqd": 1
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text",
+			"label": "Description"
+		},
+		{
+			"fieldname": "column_break_3",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "assigned_agent",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Assigned Agent",
+			"options": "AI Agent"
+		},
+		{
+			"fieldname": "parent_task",
+			"fieldtype": "Link",
+			"label": "Parent Task",
+			"options": "AI Task"
+		},
+		{
+			"fieldname": "status_section",
+			"fieldtype": "Section Break",
+			"label": "Status"
+		},
+		{
+			"default": "Pending",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Pending\nProcessing\nAwaiting Approval\nDelegated\nCompleted\nFailed\nCancelled"
+		},
+		{
+			"default": "Medium",
+			"fieldname": "priority",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Priority",
+			"options": "Low\nMedium\nHigh\nCritical"
+		},
+		{
+			"fieldname": "column_break_8",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "due_date",
+			"fieldtype": "Datetime",
+			"label": "Due Date"
+		},
+		{
+			"default": 0,
+			"fieldname": "iteration_count",
+			"fieldtype": "Int",
+			"label": "Iteration Count",
+			"read_only": 1
+		},
+		{
+			"fieldname": "input_section",
+			"fieldtype": "Section Break",
+			"label": "Input"
+		},
+		{
+			"fieldname": "input_payload",
+			"fieldtype": "Code",
+			"label": "Input Payload (JSON)",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "column_break_12",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "metadata",
+			"fieldtype": "Code",
+			"label": "Metadata (JSON)",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "execution_section",
+			"fieldtype": "Section Break",
+			"label": "Execution"
+		},
+		{
+			"fieldname": "agent_draft_output",
+			"fieldtype": "Text Editor",
+			"label": "Agent Draft Output",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_15",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "final_action_payload",
+			"fieldtype": "Code",
+			"label": "Final Action Payload (JSON)",
+			"options": "JSON",
+			"read_only": 1
+		},
+		{
+			"fieldname": "result_section",
+			"fieldtype": "Section Break",
+			"label": "Result"
+		},
+		{
+			"fieldname": "result_payload",
+			"fieldtype": "Code",
+			"label": "Result Payload (JSON)",
+			"options": "JSON",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_18",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": 0,
+			"fieldname": "tokens_consumed",
+			"fieldtype": "Int",
+			"label": "Tokens Consumed",
+			"read_only": 1
+		},
+		{
+			"default": 0,
+			"fieldname": "execution_time",
+			"fieldtype": "Float",
+			"label": "Execution Time (seconds)",
+			"read_only": 1
+		},
+		{
+			"fieldname": "error_section",
+			"fieldtype": "Section Break",
+			"label": "Error"
+		},
+		{
+			"fieldname": "error_message",
+			"fieldtype": "Text",
+			"label": "Error Message",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_21",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "approved_by",
+			"fieldtype": "Link",
+			"label": "Approved By",
+			"options": "User",
+			"read_only": 1
+		},
+		{
+			"fieldname": "approved_on",
+			"fieldtype": "Datetime",
+			"label": "Approved On",
+			"read_only": 1
+		},
+		{
+			"fieldname": "child_tasks_section",
+			"fieldtype": "Section Break",
+			"label": "Child Tasks"
+		},
+		{
+			"fieldname": "child_tasks",
+			"fieldtype": "Table",
+			"label": "Child Tasks",
+			"options": "AI Task",
+			"read_only": 1
+		}
+	],
+	"links": [
+		{
+			"link_doctype": "AI Agent",
+			"link_fieldname": "assigned_agent"
+		},
+		{
+			"link_doctype": "AI Task",
+			"link_fieldname": "parent_task"
+		}
+	],
+	"modified": "2026-03-22 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_agents",
+	"name": "AI Task",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

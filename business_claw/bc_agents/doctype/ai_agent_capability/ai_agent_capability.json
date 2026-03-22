@@ -1,0 +1,39 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"creation": "2026-03-22 00:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"capability",
+		"description"
+	],
+	"fields": [
+		{
+			"fieldname": "capability",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Capability",
+			"reqd": 1
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Small Text",
+			"in_list_view": 1,
+			"label": "Description"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2026-03-22 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "bc_agents",
+	"name": "AI Agent Capability",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "idx",
+	"sort_order": "ASC",
+	"states": [],
+	"track_changes": 1
+}

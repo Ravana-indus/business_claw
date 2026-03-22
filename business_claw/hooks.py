@@ -39,12 +39,11 @@ doc_events = {}
 # ---------------
 
 scheduler_events = {
-	"all": [
-		"business_claw.bc_audit.logger.cleanup_old_logs"
-	],
-	"daily": [
-		"business_claw.bc_audit.logger.daily_summary"
-	]
+    "all": ["business_claw.bc_audit.logger.cleanup_old_logs"],
+    "daily": ["business_claw.bc_audit.logger.daily_summary"],
+    "daily_long": [
+        "business_claw.bc_agents.doctype.ai_agent.ai_agent.reset_daily_token_usage"
+    ],
 }
 
 # Permission Query Conditions
@@ -57,9 +56,7 @@ has_permission = {}
 # Authentication Hooks
 # --------------------
 
-auth_hooks = [
-	"business_claw.bc_mcp.auth.validate_mcp_request"
-]
+auth_hooks = ["business_claw.bc_mcp.auth.validate_mcp_request"]
 
 # Whitelisted Methods
 # --------------------
@@ -84,7 +81,4 @@ fixtures = []
 # API Rate Limiting
 # -----------------
 
-api_rate_limit = {
-	"limit": 100,
-	"window": 60
-}
+api_rate_limit = {"limit": 100, "window": 60}
