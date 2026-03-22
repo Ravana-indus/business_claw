@@ -54,3 +54,4 @@ node_modules/
 # Cloudflare
 .env
 .env.local
+.worktrees
